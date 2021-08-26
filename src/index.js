@@ -3,9 +3,10 @@ import {
   classModule,
   propsModule,
   styleModule,
-  eventListenersModule,
-  h,
+  eventListenersModule
 } from "snabbdom";
+// 自定义的h函数
+import h from './mySnabbdom/h'
 
 // 创建出 patch 函数
 const patch = init([
@@ -20,16 +21,20 @@ const patch = init([
 const container = document.getElementById("container");
 
 // 创建虚拟节点
-const vnode1 = h('ul', {
-
-},[
-  h('a', {
+const vnode1 = h('ul', {}, [
+  h('li', {}, '猫'),
+  h('li', {}, '狗'),
+  h('li', {}, h('a', {
     props: {
       href: 'http://www.baidu.com',
       target: '_blank'
     }
-  }, '百度'),
-  h('li', {}, 'test')
+  }, '百度一下')),
+  h('li', {}, [
+    h('div', {}, '你好'),
+    h('div', {}, '世界'),
+    h('span', {}, '哈哈哈哈')
+  ])
 ])
 console.log(vnode1)
 
