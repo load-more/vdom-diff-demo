@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   mode: 'development',
+  devtool: 'eval-cheap-module-source-map',
   entry: './src/index.js',
   output: {
     // 虚拟打包路径，文件夹不会真正生成，而是在8090端口虚拟生成

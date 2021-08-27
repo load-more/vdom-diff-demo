@@ -7,7 +7,55 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="container"></div>
+  <div>
+    <h4>情况1：旧节点为真实 DOM</h4>
+    <button id="patch1">patch</button>
+    <div id="container1"></div>
+    <hr/>
+  </div>
+  <div>
+    <h4>情况2：新旧节点不相同</h4>
+    <button id="init2">init</button>
+    <button id="patch2">patch</button>
+    <div id="container2"></div>
+    <hr/>
+  </div>
+  <div>
+    <h4>情况3：新旧节点相同 && 完全一样</h4>
+    <button id="init3">init</button>
+    <button id="patch3">patch</button>
+    <div id="container3"></div>
+    <hr/>
+  </div>
+  <div>
+    <h4>情况4：新旧节点相同 && 新节点有 text 且和旧节点的 text 一样</h4>
+    <button id="init4">init</button>
+    <button id="patch4">patch</button>
+    <div id="container4"></div>
+    <hr/>
+  </div>
+  <div>
+    <h4>情况5：新旧节点相同 && 新旧节点的 text 不同</h4>
+    <button id="init5">init</button>
+    <button id="patch5">patch</button>
+    <div id="container5"></div>
+    <hr/>
+  </div>
+  <div>
+    <h4>情况6：新旧节点相同 && 新节点有 children 但旧节点没有 children</h4>
+    <button id="init6">init</button>
+    <button id="patch6">patch</button>
+    <div id="container6"></div>
+    <hr/>
+  </div>
+  <div>
+    <h4>情况7：新旧节点相同 && 新旧节点都有 children</h4>
+    <button id="init7">init</button>
+    <button id="patch7">patch</button>
+    <div id="container7"></div>
+    <hr/>
+  </div>
+
   <!-- 调用虚拟文件夹 dist 下的打包文件 -->
   <script src="/dist/bundle.js"></script>
 </body>
