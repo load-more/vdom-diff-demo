@@ -470,6 +470,10 @@ else {
 
 
 
+## 实现代码
+
+- https://github.com/load-more/vdom-diff-demo
+
 ## 参考资料
 
 - https://www.bilibili.com/video/BV1v5411H7gZ?from=search&seid=326463084850277620
